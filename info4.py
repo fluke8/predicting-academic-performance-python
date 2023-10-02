@@ -1,28 +1,28 @@
-# import pandas as pd
-
-# df = pd.read_csv('uspevaemost.csv', encoding='cp1251')
-
-# # Замените 'desired_id' на идентификатор (ID) студента, который вас интересует
-# desired_id = '2B2F594F58715179766342613567424C58306B4776513D3D'
-
-# # Фильтрация строк по ID студента
-# result = df[df['Студент'] == desired_id]
-
-# # Вывод результатов
-# result.to_csv('uspevaemost_1_studenta.csv')
-
 import pandas as pd
 
-df = pd.read_csv('tvorch_studenta1.csv')
+df = pd.read_csv('uspevaemost2.csv')
 
 # Замените 'desired_id' на идентификатор (ID) студента, который вас интересует
-desired_id = 'Творческий проект'
+desired_id = 'неудовлетворительно'
 
 # Фильтрация строк по ID студента
-result = df[df['Дисциплина'] == desired_id]
+result = df[df['Оценка'] != desired_id]
 
 # Вывод результатов
-result.to_csv('tvorch_studenta2.csv')
+result.to_csv('uspv_bez_neud.csv', index=False)
+
+# import pandas as pd
+
+# df = pd.read_csv('uspevaemost_bez_anomalii_tvorcha.csv')
+
+# # Замените 'desired_id' на идентификатор (ID) студента, который вас интересует
+# desired_id = 'Информатика 1.1'
+
+# # Фильтрация строк по ID студента
+# result = df[df['Дисциплина'] == desired_id]
+
+# # Вывод результатов
+# result.to_csv('tvorch_studenta2.csv')
 
 
 # import pandas as pd
