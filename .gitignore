@@ -1,1 +1,4 @@
-csv/
+csv/*
+
+!csv/uspevaemost_nakop_bez_perevedennih_raw1.csv
+!csv/uspevaemost2.csv
