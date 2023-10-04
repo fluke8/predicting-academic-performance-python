@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Загрузите данные из CSV файла
-df = pd.read_csv('uspevaemost_studenta.csv')
+df = pd.read_csv('csv/uspevaemost_studenta.csv')
 
 df.drop_duplicates(inplace=True)
 
@@ -14,7 +14,7 @@ df = df.drop_duplicates(subset=df.columns.difference(['Оценка']), keep=Fal
 
 print(df.shape)
 
-df.to_csv('uspevaemost_studenta_bez_izm.csv', index=False)
+df.to_csv('csv/uspevaemost_studenta_bez_izm123321.csv', index=False)
 
 
 # import pandas as pd

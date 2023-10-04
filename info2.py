@@ -11,15 +11,15 @@ df['Оценка'] = df['Оценка'].map({
 
 df.to_csv('uspevaemost_studenta_bez_izm_chisl.csv', index=False)
 
-# max_indices = df.groupby(['Студент', 'Группа', 'Дисциплина', 'Семестр', 'Учебный год', 'Специальность', 'Форма обучения', 'Квалификация', 'Статус'])['Оценка'].idxmax(skipna=True)
-# result_df = df.loc[max_indices]
+max_indices = df.groupby(['Студент', 'Группа', 'Дисциплина', 'Семестр', 'Учебный год', 'Специальность', 'Форма обучения', 'Квалификация', 'Статус'])['Оценка'].idxmax(skipna=True)
+result_df = df.loc[max_indices]
 
-# result_df.to_csv('uspevaemost_izm_max.csv', index=False)
+result_df.to_csv('uspevaemost_izm_max.csv', index=False)
 
-# min_indices = df.groupby(['Студент', 'Группа', 'Дисциплина', 'Семестр', 'Учебный год', 'Специальность', 'Форма обучения', 'Квалификация', 'Статус'])['Оценка'].idxmin(skipna=True)
-# result_df = df.loc[min_indices]
+min_indices = df.groupby(['Студент', 'Группа', 'Дисциплина', 'Семестр', 'Учебный год', 'Специальность', 'Форма обучения', 'Квалификация', 'Статус'])['Оценка'].idxmin(skipna=True)
+result_df = df.loc[min_indices]
 
-# result_df.to_csv('uspevaemost_izm_min.csv', index=False)
+result_df.to_csv('uspevaemost_izm_min.csv', index=False)
 
 
 # import pandas as pd

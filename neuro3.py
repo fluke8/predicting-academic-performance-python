@@ -28,6 +28,7 @@ print(accuracy_score(y_test, y_pred))
 myUspevaemost = pd.read_csv('uspevaemost_nakop_My.csv')
 
 myUspevaemost = sc.transform(myUspevaemost)
+
 print()
 print('Логик регрессион')
 print('Вероятность моего отчисления за первый семестр:',lr.predict_proba(myUspevaemost[:1,:])[:, 1] * 100)
