@@ -8,11 +8,8 @@ from keras.models import Sequential
 from keras.layers import Dense
 
 # Загрузка данных
-dataset = pd.read_csv('uspevaemost_nakop_bez_perevedennih_raw_stud_sumsem.csv')
+dataset = pd.read_csv('csv/dataset.csv')
 
-dataset = dataset.sort_values(by=['отчислен'])
-
-print(dataset.head)
 
 data = dataset.iloc[:, :-1]
 target = dataset.iloc[:, -1]
